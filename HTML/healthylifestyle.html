@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<!--FROM TEMPLATE FOR FOUNDATION -->
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Wellbeing</title>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+
+<!--Our CSS -->
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css"/>
+
+    <!--Links to other peoples CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+      <!--Social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- END -->
+
+  </head>
+
+  <body>
+    <!-- Start Adding HTML Code Here -->
+    <!-- CONTENT GOES HERE -->
+
+<!--HEADER-->
+  <div class="header">
+    <h1>The Art of Wellbeing</h1>
+    <p>“You’re always with yourself, so you might as well enjoy the company.”</p>
+    <!-- social media buttons-->
+    <div class="container">
+    </div>
+    <div class="row column">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="healthyliving.html">Healthy Living</a>
+            <a href="healthylifestyle.html">Healthy Lifestyle</a>
+            <a href="healthyeating.html">Healthy Eating</a>
+            <a href="contactus.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+    </p>
+    <a href="https://www.facebook.com/The-Art-of-Wellbeing-430964594309123/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/TheArtofWellbe1" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/the_art_of_welllbeing/?hl=en" class="fa fa-instagram"></a>
+  </div>
+<!--HEADER END-->
+
+
+<!--Google Maps API Begin-->
+
+<title>Healthy Lifestyle Map</title>
+<meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+
+  #map {
+    height: 425px;
+  }
+  /* Makes the page fill the window. */
+  html, body {
+    height: 50%%;
+    margin: 5;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+
+/*Adding Map*/
+  function initMap() {
+  var sheffield = {lat: 53.381293, lng: -1.470128};
+  var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: sheffield,
+      mapTypeId: 'hybrid'
+    });
+
+/*Adding Content for Info Window #1*/
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<p1><b>Xercise 4 Less Sheffield</b></p1>'+
+        '<div id="bodyContent">'+
+        '<p1>Address: 17 Guernsey Rd, Sheffield S2 4HG</p1>'+
+        '<br></br>'+
+        '<a href="https://www.xercise4less.co.uk/find-a-gym/sheffield-gym/">Xercise4Less Sheffield Website</a>'+
+        '<ul><b>Opening Times</b></ul>'+
+        '<ul>Monday 6am - 10pm</ul>'+
+        '<ul>Tuesday 6am - 10pm</ul>'+
+        '<ul>Wednesday 6am - 10pm</ul>'+
+        '<ul>Thursday 6am - 10pm</ul>'+
+        '<ul>Friday 6am - 10pm</ul>'+
+        '<ul>Saturday 8am - 8pm</ul>'+
+        '<ul>Sunday 8am - 8pm</ul>'+
+        '</div>'+
+        '</div>';
+
+/*Adding Info Window #1*/
+        var infowindow1 = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+/*Adding Marker #1*/
+      var marker1 = new google.maps.Marker({
+       position: {lat: 53.363743, lng: -1.471120},
+       map: map
+       });
+
+/*On Click Open Info Window #1*/
+      marker1.addListener('click', function() {
+    infowindow1.open(map, marker);
+  });
+
+  /*Adding Content for Info Window #2*/
+      var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<p1><b>The Gym Sheffield</b></p1>'+
+          '<div id="bodyContent">'+
+          '<p1>Address: Brookshaw Park, Gibraltar St, Sheffield S3 8RW</p1>'+
+          '<br></br>'+
+          '<a href="https://www.thegymgroup.com/find-a-gym/sheffield/">The Gym Sheffield Website</a>'+
+          '<ul><b>Opening Times</b></ul>'+
+          '<ul>Open 24 Hours</ul>'+
+          '</div>'+
+          '</div>';
+
+  /*Adding Info Window #2*/
+          var infowindow2 = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+  /*Adding Marker #2*/
+        var marker2 = new google.maps.Marker({
+         position: {lat: 53.387797, lng: -1.472885},
+         map: map
+         });
+
+  /*On Click Open Info Window #2*/
+        marker2.addListener('click', function() {
+      infowindow2.open(map, marker);
+    });
+
+    /*Adding Content for Info Window #3*/
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<p1><b>Sheffield Hallam Active Gym</b></p1>'+
+            '<div id="bodyContent">'+
+            '<p1>Address: Pond St, Sheffield S1 1WB</p1>'+
+            '<br></br>'+
+            '<a href="https://www.shu.ac.uk/current-students/sport/active">Sheffield Hallam Active Gym Website</a>'+
+            '<ul><b>Opening Times</b></ul>'+
+            '<ul>Monday 6:30am - 10:30pm</ul>'+
+            '<ul>Tuesday 6:30am - 10:30pm</ul>'+
+            '<ul>Wednesday 6:30am - 10:30pm</ul>'+
+            '<ul>Thursday 6:30am - 10:30pm</ul>'+
+            '<ul>Friday 6:30am - 10:30pm</ul>'+
+            '<ul>Saturday 10:30am - 6pm</ul>'+
+            '<ul>Sunday 10:30am - 6pm</ul>'+
+            '</div>'+
+            '</div>';
+
+    /*Adding Info Window #3*/
+            var infowindow3 = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+    /*Adding Marker #3*/
+          var marker3 = new google.maps.Marker({
+           position: {lat: 53.379767, lng: -1.464785},
+           map: map
+           });
+
+    /*On Click Open Info Window #3*/
+          marker3.addListener('click', function() {
+        infowindow3.open(map, marker);
+      });
+
+      /*Adding Content for Info Window #4*/
+          var contentString = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<p1><b>Sweat! Gym</b></p1>'+
+              '<div id="bodyContent">'+
+              '<p1>Address: 81a The Moor, Sheffield S1 4PF</p1>'+
+              '<br></br>'+
+              '<a href="https://www.shu.ac.uk/current-students/sport/active">Sheffield Hallam Active Gym Website</a>'+
+              '<ul><b>Opening Times</b></ul>'+
+              '<ul>Monday 6am - 10pm</ul>'+
+              '<ul>Tuesday 6am - 10pm</ul>'+
+              '<ul>Wednesday 6am - 10pm</ul>'+
+              '<ul>Thursday 6am - 10pm</ul>'+
+              '<ul>Friday 6am - 10pm</ul>'+
+              '<ul>Saturday 8am - 7pm</ul>'+
+              '<ul>Sunday 8am - 7pm</ul>'+
+              '</div>'+
+              '</div>';
+
+      /*Adding Info Window #4*/
+              var infowindow4 = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+      /*Adding Marker #4*/
+            var marker4 = new google.maps.Marker({
+             position: {lat: 53.375978, lng: -1.473585},
+             map: map
+             });
+
+      /*On Click Open Info Window #4*/
+            marker4.addListener('click', function() {
+          infowindow4.open(map, marker);
+        });
+
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbM3cbFPtED8DrPJgDZ0t9jMliNSkwONU&callback=initMap"
+async defer></script>
+
+
+<!-- RSS FEED -->
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="105678/"></script> <!-- end feedwind code -->
+
+
+<!--FROM TEMPLATE FOR FOUNDATION -->
+  <script src="js/jquery.js"></script>
+  <script src="js/what-input.js"></script>
+  <script src="js/foundation.js"></script>
+  <script src="js/app.js"></script>
+
+
+  </body>
+
+</html>
